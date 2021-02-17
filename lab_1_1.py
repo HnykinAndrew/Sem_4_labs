@@ -39,7 +39,6 @@ def create_hollow_torus(x, y, z, r1, r2, R, lc_input):
     ov3 = gmsh.model.geo.revolve([(2, s2)], x, y, z, 0, 1, 0, -math.pi / 2)
 
     ov4 = gmsh.model.geo.revolve([(2, s2)], x, y, z, 0, 1, 0, math.pi / 2)
-    print (ov1[1])
     gmsh.model.geo.addPhysicalGroup(3, [ov1[1][1], ov2[1][1], ov3[1][1], ov4[1][1]], 1)
 
 
